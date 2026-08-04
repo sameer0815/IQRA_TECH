@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sortable and Filterable Table</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Sortable and Filterable Table</h2>
+    <input type="text" id="searchInput" placeholder="Search..." onkeyUp="searchTable()">
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Product Name</th>
+                <th onclick="sortTable(1)">Price</th>
+                <th onclick="sortTable(2)">Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product A</td>
+                <td>$10</td>
+                <td>Category 1</td>
+            </tr>
+            <tr>
+                <td>Product B</td>
+                <td>$20</td>
+                <td>Category 2</td>
+            </tr>
+            <tr>
+                <td>Product C</td>
+                <td>$15</td>
+                <td>Category 3</td>
+            </tr>
+            <tr>
+                <td>Product D</td>
+                <td>$18</td>
+                <td>Category 1</td>
+            </tr>
+            <tr>
+                <td>Product E</td>
+                <td>$12</td>
+                <td>Category 4</td>
+            </tr>
+            <tr>
+                <td>Product F</td>
+                <td>$16</td>
+                <td>Category 1</td>
+            </tr>
+            <tr>
+                <td>Product G</td>
+                <td>$14</td>
+                <td>Category 3</td>
+            </tr>
+            <tr>
+                <td>Product H</td>
+                <td>$19</td>
+                <td>Category 1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="./script.js"></script>
+
+
+</body>
+</html>

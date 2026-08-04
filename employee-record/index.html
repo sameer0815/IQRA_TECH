@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Database Management System</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Employee Database Management System</h2>
+        <div id="formContainer">
+            <h3>Add Employee</h3>
+            <form id="employeeForm" onsubmit="addEmployee(); return false">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="number" id="age" placeholder="Age" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="department" placeholder="Department" required>
+                    <button type="submit" class="btn1">Add Employee</button>
+                </div>
+            </form>
+        </div>
+        <div id="searchContainer">
+            <h3>Search Employees</h3>
+            <input type="text" id="searchInput" placeholder="Search by Name or Department" onkeyup="searchEmployee()">
+        </div>
+        <div id="employeeList">
+            <h3>Employee List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody">
+                    <!-- Employee records will be added dynamically here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<script src="./script.js">
+// Write Your JS Code Here.....</script>
+
+</body>
+</html>

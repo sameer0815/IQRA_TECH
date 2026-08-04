@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit=" return false">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" onblur="validateFullName()">
+            <span class="error" id="fullNameError"></span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" onblur="validatePassword()">
+            <span class="error" id="passwordError"></span>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber"  onblur="validatePhone()">
+            <span class="error" id="phoneNumberError"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" onblur="validateEmail()">
+            <span class="error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" onchange="updateCurrency()">
+                <option value="">Select Country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Canada">Canada</option>
+                <option value="Egypt">Egypt</option>
+                <option value="India">India</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Qatar">Qatar</option>
+                <option value="SaudiArabia">Saudi Arabia</option>
+                <option value="SouthAfrica">South Africa</option>
+                <option value="UAE">UAE</option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="USA">USA</option>
+                <option value="Yemen">Yemen</option>         
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="currency">Currency</label>
+            <input type="text" id="currency" name="currency" readonly>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="./script.js">
+// Write Your JS Code Here......
+</script>
+
+</body>
+</html>

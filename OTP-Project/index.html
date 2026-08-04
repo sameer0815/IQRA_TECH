@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OTP Verification</title>
+
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+        <div class="otp-card">
+
+            <!-- Heading -->
+
+            <h2 class="text-center mb-2">
+                OTP Verification
+            </h2>
+
+            <p class="text-center text-muted">
+                Enter the 4-digit OTP sent to your mobile number
+            </p>
+
+
+            <!-- OTP Inputs -->
+
+            <div class="otp-box">
+
+                <input type="text"
+                       maxlength="1"
+                       class="otp-input">
+
+                <input type="text"
+                       maxlength="1"
+                       class="otp-input">
+
+                <input type="text"
+                       maxlength="1"
+                       class="otp-input">
+
+                <input type="text"
+                       maxlength="1"
+                       class="otp-input">
+
+            </div>
+
+
+            <!-- Timer -->
+
+            <h5 id="timer" class="text-center mt-3">
+                Time Remaining : 30 sec
+            </h5>
+
+
+            <!-- Attempts -->
+
+            <h6 class="text-center">
+                Attempts Left :
+                <span id="attempts">3</span>
+            </h6>
+
+
+            <!-- Status -->
+
+            <p id="status" class="text-center"></p>
+
+
+            <!-- Buttons -->
+
+            <div class="d-grid gap-2 mt-4">
+
+                <button
+                    id="generateBtn"
+                    class="btn btn-primary">
+
+                    Generate OTP
+
+                </button>
+
+
+                <button
+                    id="verifyBtn"
+                    class="btn btn-success">
+
+                    Verify OTP
+
+                </button>
+
+
+                <button
+                    id="resendBtn"
+                    class="btn btn-warning"
+                    disabled>
+
+                    Resend OTP
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Custom JS -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

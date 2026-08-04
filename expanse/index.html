@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="./incex.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Expense Tracker</h2>
+    <form id="expenseForm" onsubmit="addExpenses(); return false">
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="text" id="category" placeholder="Category" required>
+        <input type="text" id="description" placeholder="Description">
+        <button type="submit">Add Expense</button>
+    </form >
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="expenseList"></tbody>
+    </table>
+    <div id="summary">
+        <h3>Summary</h3>
+        <p>Total Expenses: <span id="totalExpenses">0</span></p>
+    </div>
+</div>
+
+<script src="./script.js">
+ // Write Your JS Code Here....
+</script>
+
+</body>
+</html>

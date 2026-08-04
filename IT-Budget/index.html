@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It Budget</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form id="budgetform" class="row g-3" onsubmit="submitForm(event)">
+                    <div style="text-align:center ;">
+                        <span class="error"></span>
+                    </div>
+                    <div class="col-12">
+                        <label class="col-form-label" for="subject">Subject : </label>
+                        <input class="form-control" type="text" name="subject" id="subject" >
+                    </div>
+                    <div class="col-12">
+                      <label class="col-form-label" for="budget">Budget : </label>
+                        <select name="budget" id="budget" class="form-select" onchange="selectBudget()">
+                            <option value="0" selected>select budget</option>
+                            <option value="budget1">Budget 1</option>
+                            <option value="budget2">Budget 2</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label class="col-form-label" for="budgetamt">Budget Amt : </label>
+                        <input class="form-control" type="text" name="budgetamt" id="budgetamt" readonly>
+                    </div>
+                    <div class="col-12">
+                        <label class="col-form-label" for="remaining">Remaining Budget : </label>
+                        <input class="form-control" type="text" class="remaining" id="remaining" readonly>
+                    </div>
+                    <div class="col-12">
+                        <label class="col-form-label" for="amount">Amount : </label>
+                        <input class="form-control" type="text" name="amount" id="amount" oninput="updateBalance()"
+                            >
+                    </div>
+                    <div class="col-12">
+                        <label class="col-form-label" for="balance">Balance : </label>
+                        <input class="form-control" type="text" name="balance" id="balance" readonly>
+                    </div>
+                    <div class="col-12">
+                        <input class="form-control btn btn-success" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <span>No. Budgets: <span id="nfe">0</span></span>
+                <table class="display table w-100" id="viewtable">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Budget</th>
+                            <th>Amount</th>
+                            <th>Balance</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js">
+       
+    </script>
+</body>
+
+</html>
