@@ -102,14 +102,20 @@ const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 }
 
 function validateForm(){
-    const isFullName=validateFullName();
-    const isPasswordValid=validatePassword();
+    const isFullName = validateFullName();
+    const isPasswordValid = validatePassword();
+    const isPhoneValid = validatePhone();
+    const isEmailValid = validateEmail();
 
-    const isPhoneValid=validatePhone();
-    const isEmailValid=validateEmail();
+    if (
+        isFullName &&
+        isPasswordValid &&
+        isPhoneValid &&
+        isEmailValid
+    ) {
+        alert("Form submitted successfully!");
+        return true;
+    }
 
-    return isFullName&&
-    isPasswordValid&&
-    isPhoneValid&&
-    isEmailValid;
+    return false;
 }
